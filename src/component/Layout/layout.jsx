@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 
-const layout = () => {
+const Layout = ({ children }) => {
   return (
     <div>
-      layout
+      {/* Navbar  */}
+      <Navbar />
+      {/* main Content  */}
+      <div className="content min-h-screen">{children}</div>
+      {/* Footer  */}
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default layout
+export default Layout;
